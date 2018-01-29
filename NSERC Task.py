@@ -31,11 +31,13 @@ def main():
                 if (matched_characters == word_length): # If matched_word is found in commit_message
                     output_file.write(commit["sha"] + "," + commit_message + "\n")
                     break
+        
         output_file.close()
         print("Output written to output.csv.")
 
     else:
         print("Invalid repository specified.")
-        return
+
+    return
     
 main()
