@@ -1,0 +1,32 @@
+Commit SHA, Commit message
+c2b969e124f65d375aac969f253279085b6f7078,Fixed #29004 -- Added inspectdb --include-views option.
+a455e732a0011dfbd15eddaa4fe60cb9439326e0,Fixed #28650 -- Added TruncWeek database function.
+f229049d6cd186025f4033dc47608b0c9731e882,Fixed #29055 -- Doc'd that escapejs doesn't make template literals safe.
+b002a032f90b8cd228cfcee6c88cd238a8191cc0,Fixed #29054 -- Fixed a regression where a queryset that annotates with geometry objects crashes.
+
+Made GEOSGeometryBase hashable.
+Regression in 19b2dfd1bfe7fd716dd3d8bfa5f972070d83b42f.
+
+Thanks Tim Graham for the review.
+3187c89d6f8c60ca7e78093d5b37e0709e71cea9,Fixed #29067 -- Fixed regression in QuerySet.values_list(..., flat=True) followed by annotate().
+d0b44c44ef6ac8b6a7e332b83b9932f23dee41fd,Fixed #29060 -- Made {% firstof %} assign '' to the asvar if all inputs are false.
+8dc675d90f14a84ef95f16c7cc8100d9a04459b3,Fixed #28838 -- Fixed Model.save() crash if the base manager annotates with a related field.
+cbac11f9624d529809e9bdaa7f4d3ab2c5e93009,Fixed #28784 -- Clarified how migrate --fake works.
+95fd5cf459dd23d18e9ef8e1a03eb820fe7205ce,Fixed #28403 -- Added missing formats in FORMAT_MODULE_PATH docs.
+d38a3169a426516623929ff8c2b2c9703d801b75,Fixed #28977 -- Changed local-memory cache to use LRU culling.
+
+LRU culling turns every read into a kind of write to the cache: cache keys
+are moved to the first position in the OrderedDict when they are retrieved.
+The RWLock which permitted multiple readers while prioritizing a single
+writer is obsolete since all accesses are now writes.
+f9844f484186fa13399bf8b96f58616687fe158a,Fixed #28748 -- Made model field choices check more strict for named groups.
+9d129b72cea9e9e3850f3f657136ba3bbf6f633f,Fixed #29047 -- Corrected Substr test to use expressions.
+
+Regression in e2d6e14662d780383e18066a3182155fb5b7747b.
+2870879981d11619ca383ada1223d384fdc0ac51,Fixed heading level typo in docs/ref/models/database-functions.txt.
+f0f383b6350c7b2f64bb2a6491a395abdd3313d6,Fixed "template tag" spelling in docs.
+ff05de760cc4ef4c7f188e163c722ec3bc1f0cbf,Fixed #29038 -- Removed closing slash from HTML void tags.
+4b0f39d9fb2033a9597e30ac13af162440b82ebc,Refs #29041 -- Fixed typo in docs/releases/2.1.txt.
+37c17846ad6b02c6dca72e8087a279cca04a0c27,Fixed #28343 -- Add an OS chooser for docs command line examples.
+47d238b69602711c06c369a5555bb554a4b3f7fb,Fixed #29041 -- Changed SelectMultiple's multiple attribute to HTML5 boolean syntax.
+7fbb1bd00d8a3e9a834de83d36ebcbff15c18938,Fixed #29032 -- Fixed an example of using expressions in QuerySet.values().

@@ -1,0 +1,11 @@
+Commit SHA, Commit message
+f89c325fbe9ad0e156b31dd6b7514dbf4d7d0088,Merge pull request #4439 from nkonin/fix/certifi-broken-link
+
+Fix broken link to Certifi
+0813c865ee0495952c38d2b8e2932a184a1edcd3,Fix broken link to Certifi
+2255c34a65b5b1353004dc8d49cc397cd794ec15,Fix DNS resolution by using hostname instead of netloc and strip username and password when comparing against proxy bypass items.
+030dcce20cb8b4a82e7b0e5e09b7a8f33121938d,Prefer https over http for links in the documentation
+
+- Fixed Read the Docs links
+- Fixed GitHub links
+- Fixed PyPI links
